@@ -17,7 +17,16 @@ Homepage for Thermos Studio, which links to our applications.
     - Configure as a spa? `No`
     - Set up automatic builds and deploy with GitHub? `No`
         - Setting up GitHub Actions afterwards avoids common service account issues with the firebase init command.
-4. `firebase deploy`
+4. Deploy with the command `firebase deploy`
+5. Create Firebase token for GitHub Actions:
+    `firebase login:ci`
+6. Add the token to your GitHub repository as a Secret:
+   - In your GitHub repository: Settings > Secrets and variables > Actions > "New repository secret"
+     - Name: `FIREBASE_DEPLOY_TOKEN`
+     - Value: [The token you received from the login:ci command]
+
+
+
 
 ## Local Development
 
