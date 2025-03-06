@@ -1,0 +1,19 @@
+{
+    "name": "Thermos Studio",
+    "image": "node:20",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "dbaeumer.vscode-eslint",
+          "esbenp.prettier-vscode",
+          "ritwickdey.LiveServer"
+        ],
+        "settings": {
+          "editor.formatOnSave": true
+        }
+      }
+    },
+    "postCreateCommand": "npm install -g firebase-tools http-server",
+    "forwardPorts": [5000, 9005, 8080],
+    "remoteUser": "vscode"
+  }

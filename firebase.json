@@ -1,0 +1,24 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/study-everywhere/**",
+        "destination": "https://study-everywhere-app.web.app"
+      },
+      {
+        "source": "/spirits-guide/**",
+        "destination": "https://spirits-guide-app.web.app"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
